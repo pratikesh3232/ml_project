@@ -1,0 +1,6 @@
+[ 2023-10-18 11:12:31,740 ] 96 werkzeug - WARNING -  * Debugger is active!
+[ 2023-10-18 11:12:31,753 ] 96 werkzeug - INFO -  * Debugger PIN: 362-412-951
+[ 2023-10-18 11:12:33,876 ] 14 root - INFO - Error occured in python script name [F:\WORK\ml_project\app.py] line number [11] erro message [testing exception]
+[ 2023-10-18 11:12:33,877 ] 96 werkzeug - INFO - 127.0.0.1 - - [18/Oct/2023 11:12:33] "GET / HTTP/1.1" 200 -
+[ 2023-10-18 11:12:33,971 ] 96 werkzeug - INFO - 127.0.0.1 - - [18/Oct/2023 11:12:33] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[ 2023-10-18 11:26:37,623 ] 96 werkzeug - INFO -  * Detected change in 'F:\\WORK\\ml_project\\src\\component\\data_ingestion.py', reloading
