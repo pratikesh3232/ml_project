@@ -1,19 +1,17 @@
-# Handle Missing value
-# Outliers treatment
-#Hanle Imblanced dataset
-#Convert categorical columns into numerical columns
-
-import os, sys
+import os,sys
 import pandas as pd
-import numpy as np
-from src.logger import logging
-from src.exception import CustmeException
+import numpy as np 
+sys.path.append('F:\\WORK\\ml_project\\')
+from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
-from sklearn.impute import SimpleImputer
+from src.logger import logging
+from src.exception import  CustmeException
+from  sklearn.impute import SimpleImputer
 from dataclasses import dataclass
 from sklearn.pipeline import Pipeline
 from sklearn.compose import ColumnTransformer
-from src.utils import save_object
+from src.utils import save_obj
+
 
 @dataclass
 class DataTransfromartionConfigs:
@@ -116,7 +114,7 @@ class DataTransformation:
             test_array = np.c_[input_test_arr, np.array(traget_feature_test_data)]
 
 
-            save_object(file_path=self.data_transformation_config.preprocess_obj_file_patrh,
+            save_obj(file_path=self.data_transformation_config.preprocess_obj_file_patrh,
                         obj=preprocess_obj)
             
             return (train_array,

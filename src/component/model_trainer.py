@@ -8,7 +8,7 @@ from sklearn.impute import SimpleImputer
 from dataclasses import dataclass
 from sklearn.pipeline import Pipeline
 from sklearn.compose import ColumnTransformer
-from src.utils import save_object
+from src.utils import save_obj
 from src.utils import evaluate_model
 from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeClassifier
@@ -17,7 +17,7 @@ from sklearn.model_selection import GridSearchCV
 
 @dataclass
 class ModelTrainerConfig:
-    train_model_file_apth = os.path.join("artifacts/model_trainer", "model.pkl")
+    train_model_file_path = os.path.join("artifacts/model_trainer", "model.pkl")
 
 class ModelTrainer:
     def __init__(self):
@@ -80,7 +80,7 @@ class ModelTrainer:
             logging.info(f"best model found, Model Name is {best_model_name}, accuracy Score: {best_model_score}")
 
 
-            save_object(file_path=self.model_trainer_config.train_model_file_apth,
+            save_obj(file_path=self.model_trainer_config.train_model_file_path,
                         obj = best_model
                         )
 
